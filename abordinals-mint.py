@@ -63,8 +63,8 @@ def main():
         json.dump(template_json, temp_file, indent=4)
         temp_file_path = temp_file.name
 
-    # Construct the chia rpc command using the temporary file path
-    command = f"chia rpc wallet nft_mint_nft -j {temp_file_path}"
+    # Construct the aba rpc command using the temporary file path
+    command = f"aba rpc wallet nft_mint_nft -j {temp_file_path}"
 
     print(command)
 

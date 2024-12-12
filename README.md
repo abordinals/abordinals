@@ -1,33 +1,33 @@
-# Chordinals early beta 0.1
+# Abordinals early beta 0.1
 
-[Chordinals](https://www.chordinals.com/) are onchain NFT's on the Chia blockchain. They must only use onchain URI's in the 3 NFT1 URI fields, uri's, metadata uri's and license uri's.
+[Abordinals](https://www.abordinals.com/) are onchain NFT's on the Aba blockchain. They must only use onchain URI's in the 3 NFT1 URI fields, uri's, metadata uri's and license uri's.
 
-There are two scripts, one for encoding and one for minting an individual Chordinal. We'll probably combine these into one script soon.
+There are two scripts, one for encoding and one for minting an individual Abordinal. We'll probably combine these into one script soon.
 
 This is an early beta release, and CLI instructions may change as we improve the code in future versions.
 
-## Mint a Chordinal
+## Mint a Abordinal
 
-### To mint a single Chordinal
+### To mint a single Abordinal
 
 - Review the values in the template.json file, updating the wallet_id and royalty values etc. as needed
 
 ```
-python3 chordinals-mint.py urifile metadatafile.json address feemojos
+python3 abordinals-mint.py urifile metadatafile.json address feemojos
 ```
 
-where urifile is the content file of the Chordinal, metadatafile.json is the CHIP-0007 metadata file for it, address is the address for the chordinal to be sent to, and feemojos is the blockchain fee in mojos to incentivize farmers to include the mint transaction in a block. You can use --dryrun to output info without submitting the transaction to the blockchain.
+where urifile is the content file of the Abordinal, metadatafile.json is the CHIP-0007 metadata file for it, address is the address for the abordinal to be sent to, and feemojos is the blockchain fee in mojos to incentivize farmers to include the mint transaction in a block.
 
 #### Example Usage
 
 ```
-python3 chordinals-mint.py test.png metadatatest.json xch1cchazmc92k370genxxpyuzqhtyn8m2acv46n3ue2qwnpu5s4urdqsk9fnj 100
+python3 abordinals-mint.py test.png metadatatest.json xch1cchazmc92k370genxxpyuzqhtyn8m2acv46n3ue2qwnpu5s4urdqsk9fnj 100
 ```
 
 ### Reference Links
 
-- [Chordinals](https://www.chordinals.com/)
-- [Chordiforge](https://www.chordiforge.com/)
+- [Abordinals](https://www.abordinals.com/)
+- [Chordiforge](https://www.chordifun.com/)
 - [Anarkoic](https://www.anarkoic.com/)
 
 ## Data URI Encoder
@@ -43,11 +43,11 @@ This script encodes files into data URL's, supporting various file types and cor
 
 ### Usage
 
-1.  **Save the script:** Save the code as a Python file (e.g., `chordinals.py`).
+1.  **Save the script:** Save the code as a Python file (e.g., `abordinals.py`).
 2.  **Run from the command line:**
 
     ```bash
-    python chordinals.py encode <filename>
+    python abordinals.py encode <filename>
     ```
 
     Replace `<filename>` with the path to the file you want to encode.
@@ -68,5 +68,5 @@ Unit tests are provided in the `tests` directory. To run the tests:
 ### Example
 
 ```bash
-python chordinals.py encode my_image.png
+python abordinals.py encode my_image.png
 ```
